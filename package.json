@@ -1,0 +1,32 @@
+{
+  "name": "jp-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/error404-sp/jp-dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/error404-sp/jp-dashboard/issues"
+  },
+  "homepage": "https://github.com/error404-sp/jp-dashboard#readme",
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.3",
+    "vite": "^7.1.6"
+  }
+}
