@@ -1,0 +1,39 @@
+export const uiInitState = {
+  theme: "light",
+  sidePanel: true,
+  rightPanel: true,
+  showNotif: true,
+  showRecent: true,
+  breakpoint: "desktop",
+};
+
+export const uiReducer = (state, action) => {
+  switch (action.type) {
+    case "TOGGLE_THEME":
+      return { ...state, theme: state.theme === "light" ? "dark" : "light" };
+
+    case "TOGGLE_SIDEPANEL":
+      return { ...state, sidePanel: !state.sidePanel };
+
+    case "TOGGLE_RIGHTPANEL":
+      return { ...state, rightPanel: !state.rightPanel };
+
+    case "SET_BREAKPOINT":
+      const payload = action.payload;
+      return {
+        ...state,
+        breakpoint: payload,
+        sidePanel: payload === "mobile" ? false : state.sidePanel,
+        rightPanel: payload === "desktop" ? true : false,
+      };
+
+    case "TOGGLE_NOTIFS":
+      return { ...state, showNotif: !state.showNotif };
+
+    case "TOGGLE_RECENT":
+      return { ...state, showRecent: !state.showRecent };
+
+    default:
+      return state;
+  }
+};

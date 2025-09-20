@@ -4,6 +4,7 @@ import { UIProvider } from "./contexts/UIContext";
 import Dashboard from "./pages/dashboard/Dashboard";
 import OrderList from "./pages/orders/OrderList";
 import Layout from "./components/layout/Layout";
+import "./styles/global.css";
 
 const App = () => {
   return (
