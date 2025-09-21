@@ -11,4 +11,13 @@ export default defineConfig({
       generateScopedName: "[local]__[hash:base64:5]",
     },
   },
+  build: {
+    outDir: "dist",
+  },
+  server: {
+    historyApiFallback: true,
+  },
+  preview: {
+    historyApiFallback: true,
+  },
 });
