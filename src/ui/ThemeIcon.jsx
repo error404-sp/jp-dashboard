@@ -8,12 +8,6 @@ export default function ThemeIcon({
   type = "default",
   style = {},
 }) {
-  const { state } = useContext(UIContext);
-  const darkMode = state.theme === "dark";
-
-  // Determine color
-  const color = darkMode ? "#fff" : "#000";
-
   const ExpandIcon = ChevronRightOutlined;
   return (
     <>
@@ -23,15 +17,21 @@ export default function ThemeIcon({
             transition: "transform 0.3s ease",
             transform: expand ? "rotate(90deg)" : "rotate(0deg)",
             verticalAlign: "middle",
-            color: "var(--border-black)",
-            marginRight: 5,
+            color: "var(--light)",
+            fontSize: 16,
             ...style,
           }}
         />
       )}
       {IconComponent && (
         <IconComponent
-          style={{ color, marginRight: 8, verticalAlign: "middle" }}
+          style={{
+            color: "var(--primary-black)",
+            colorSecondary: "var(--border-black)",
+            margin: 4,
+            verticalAlign: "middle",
+            fontSize: 20,
+          }}
         />
       )}
     </>

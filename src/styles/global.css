@@ -3,12 +3,20 @@
 :root {
   /* color*/
   --border-black: rgba(28, 28, 28, 0.1);
+  --light: rgba(28, 28, 28, 0.2);
+  --primary-black: rgba(28, 28, 28, 1);
+  --text-light: rgba(28, 28, 28, 0.4);
+  --background: rgba(255, 255, 255, 1);
+  --font-regular: 14px;
 }
 
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
+  font-size: var(--font-regular);
+  color: var(--primary-black);
   box-sizing: border-box;
+  background: var(--background);
 }
 
 ul {
@@ -20,4 +28,23 @@ button {
   border: none;
   padding: 0;
   margin: 0;
+}
+
+.dark {
+  --border-black: rgba(255, 255, 255, 0.1);
+  --primary-black: rgba(255, 255, 255, 1);
+  --background: rgba(28, 28, 28, 1);
+  --light: rgba(255, 255, 255, 0.2);
+  --text-light: rgba(255, 255, 255, 0.4);
+}
+
+a,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
 }

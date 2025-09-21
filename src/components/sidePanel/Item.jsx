@@ -47,24 +47,22 @@ const Item = ({ item, level = 1 }) => {
         );
       case "page":
         return (
-          <>
-            <div className={styles.pageItem}>
-              <NavLink
-                to={item.path}
-                onClick={() =>
-                  dispatch({ type: "SET_ACTIVE_PAGE", payload: item })
-                }
-              >
-                {item.icon && (
-                  <ThemeIcon
-                    icon={item.icon}
-                    expand={Boolean(state.activePage)}
-                  />
-                )}
-                {item.label}
-              </NavLink>
-            </div>
-          </>
+          <div className={styles.pageItem}>
+            <NavLink
+              to={item.path}
+              onClick={() =>
+                dispatch({ type: "SET_ACTIVE_PAGE", payload: item })
+              }
+            >
+              {item.icon && (
+                <ThemeIcon
+                  icon={item.icon}
+                  expand={Boolean(state.activePage)}
+                />
+              )}
+              {item.label}
+            </NavLink>
+          </div>
         );
 
       default:

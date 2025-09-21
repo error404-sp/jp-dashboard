@@ -16,6 +16,12 @@ export const UIProvider = ({ children }) => {
   );
 
   useEffect(() => {
+    const root = document.documentElement;
+    if (state.theme === "dark") {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
     localStorage.setItem(
       "uiState",
       JSON.stringify({ theme: state.theme, sidePanel: state.sidePanel })
