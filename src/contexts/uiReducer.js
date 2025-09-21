@@ -1,7 +1,7 @@
 export const uiInitState = {
   theme: "light",
   sidePanel: true,
-  rightPanel: true,
+  rightPanel: false,
   showNotif: true,
   showRecent: true,
   breakpoint: "desktop",

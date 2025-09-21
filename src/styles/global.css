@@ -7,13 +7,17 @@
   --primary-black: rgba(28, 28, 28, 1);
   --text-light: rgba(28, 28, 28, 0.4);
   --background: rgba(255, 255, 255, 1);
+  --border-light: rgba(28, 28, 28, 0.05);
+  --hover-bg: rgba(249, 247, 251, 1);
   --font-regular: 14px;
+  --font-small: 12px;
 }
 
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
   font-size: var(--font-regular);
+  font-weight: 400;
   color: var(--primary-black);
   box-sizing: border-box;
   background: var(--background);
@@ -36,6 +40,8 @@ button {
   --background: rgba(28, 28, 28, 1);
   --light: rgba(255, 255, 255, 0.2);
   --text-light: rgba(255, 255, 255, 0.4);
+  --border-light: rgba(255, 255, 255, 0.05);
+  --hover-bg: rgba(255, 255, 255, 0.05);
 }
 
 a,
@@ -47,4 +53,51 @@ a:active {
 
 a:hover {
   text-decoration: none;
+}
+
+table {
+  width: 95%;
+  margin: 0 auto;
+  overflow-x: scroll;
+  border-collapse: collapse;
+  margin: 0 28px;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 8px;
+  font-size: var(--font-small);
+}
+
+th {
+  color: var(--text-light);
+  border-bottom: 1px solid var(--light);
+}
+
+table tbody tr {
+  border-bottom: 1px solid var(--border-light);
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+td input {
+  opacity: 0;
+}
+
+td input[type="checkbox"]:checked {
+  opacity: 1;
+  background-color: var(--primary-black);
+  border-color: var(--primary-black);
+  color: var(--primary-black);
+}
+
+tr:hover {
+  background: var(--hover-bg);
+  cursor: pointer;
+}
+
+tr:hover td input {
+  opacity: 1;
+  border-color: var(--light);
 }

@@ -1,0 +1,14 @@
+.profile {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 4px;
+  align-items: center;
+  min-width: fit-content;
+}
+
+.tableActions {
+  margin: 0 28px;
+  border-radius: 8px;
+  background: var(--hover-bg);
+  padding: 8px;
+}
