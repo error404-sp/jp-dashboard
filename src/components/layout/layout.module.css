@@ -3,13 +3,6 @@
   height: 100vh;
 }
 
-.sidePanel {
-  border-right: 1px solid var(--border-black);
-  justify-self: flex-start;
-  min-width: 225px;
-  max-width: 20vw;
-}
-
 .rightPanel {
   border-left: 1px solid var(--border-black);
   justify-self: flex-end;

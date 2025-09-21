@@ -1,0 +1,11 @@
+.sidePanel {
+  border-right: 1px solid var(--border-black);
+  justify-self: flex-start;
+  min-width: 225px;
+  max-width: 20vw;
+  padding: 16px;
+}
+
+.categoryItem {
+  padding: 4px 8px;
+}

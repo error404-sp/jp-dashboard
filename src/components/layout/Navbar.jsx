@@ -2,6 +2,16 @@ import { useContext } from "react";
 import styles from "./layout.module.css";
 import { UIContext } from "../../contexts/UIContext";
 import Navigation from "./Navigation";
+import {
+  HistoryTwoTone,
+  NotificationsNoneTwoTone,
+  StarTwoTone,
+  ViewSidebarOutlined,
+  ViewSidebarRounded,
+  ViewSidebarTwoTone,
+  WbSunnyTwoTone,
+} from "@mui/icons-material";
+import ThemeIcon from "../../ui/ThemeIcon";
 
 const Navbar = () => {
   const { state, dispatch } = useContext(UIContext);
@@ -18,15 +28,15 @@ const Navbar = () => {
         aria-label="Toggle side panel"
         onClick={toggleSidePanel}
       >
-        SidePanel
+        <ThemeIcon icon={ViewSidebarTwoTone} />
       </button>
       <button type="button" aria-label="Add to favourites" onClick={() => {}}>
-        Add Favourites
+        <ThemeIcon icon={StarTwoTone} />
       </button>
       <Navigation />
 
       <button type="button" aria-label="Change theme" onClick={toggleTheme}>
-        {state.theme}
+        <ThemeIcon icon={WbSunnyTwoTone} />
       </button>
 
       <button
@@ -34,7 +44,7 @@ const Navbar = () => {
         aria-label="Show recent activities"
         onClick={toggleRecents}
       >
-        Recent
+        <ThemeIcon icon={HistoryTwoTone} />
       </button>
 
       <button
@@ -42,7 +52,7 @@ const Navbar = () => {
         aria-label="Show notifications"
         onClick={toggleNotifs}
       >
-        Notifications
+        <ThemeIcon icon={NotificationsNoneTwoTone} />
       </button>
 
       <button
@@ -50,7 +60,7 @@ const Navbar = () => {
         aria-label="Toggle RightPanel"
         onClick={toggleRightPanel}
       >
-        Right Panel
+        <ThemeIcon icon={ViewSidebarTwoTone} />
       </button>
     </nav>
   );

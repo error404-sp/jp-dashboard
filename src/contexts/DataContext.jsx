@@ -1,20 +1,10 @@
 import { createContext, useReducer } from "react";
+import { dataInitialState, dataReducer } from "./dataReducer";
 
 export const DataContext = createContext();
 
-const initialState = {
-  orders: [],
-};
-
-const dataReducer = (state, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
-
 export const DataProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(dataReducer, initialState);
+  const [state, dispatch] = useReducer(dataReducer, dataInitialState);
 
   return (
     <DataContext.Provider value={{ state, dispatch }}>

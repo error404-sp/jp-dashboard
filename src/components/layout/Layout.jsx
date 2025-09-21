@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { UIContext } from "../../contexts/UIContext";
 import Navbar from "./Navbar";
 import RightPanel from "./RightPanel";
-import SidePanel from "./SidePanel";
+import SidePanel from "../sidePanel/SidePanel";
 import styles from "./layout.module.css";
 
 const Layout = ({ children }) => {
