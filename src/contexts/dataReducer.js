@@ -25,7 +25,7 @@ export const dataReducer = (state, action) => {
       return {
         ...state,
         orders: action.payload,
-        selectedOrders: [], // reset selection when new orders are loaded
+        selectedOrders: [],
       };
 
     case "TOGGLE_ORDER_SELECTION":
@@ -33,8 +33,8 @@ export const dataReducer = (state, action) => {
       return {
         ...state,
         selectedOrders: selected
-          ? [...state.selectedOrders, id] // add to array
-          : state.selectedOrders.filter((orderId) => orderId !== id), // remove from array
+          ? [...state.selectedOrders, id]
+          : state.selectedOrders.filter((orderId) => orderId !== id),
       };
 
     case "ADD_ORDER":

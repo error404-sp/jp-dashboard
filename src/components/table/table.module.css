@@ -4,6 +4,7 @@
   column-gap: 4px;
   align-items: center;
   min-width: fit-content;
+  flex-wrap: nowrap;
 }
 
 .tableActions {
@@ -11,4 +12,9 @@
   border-radius: 8px;
   background: var(--hover-bg);
   padding: 8px;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  scrollbar-width: thin;
 }

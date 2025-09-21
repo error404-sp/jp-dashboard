@@ -19,12 +19,18 @@ const TableItem = ({ item, isLoading }) => {
   if (isLoading) {
     return (
       <tr>
-        <td></td>
+        <td>
+          <input
+            type="checkbox"
+            checked={isChecked}
+            onChange={(e) => handleCheckboxChange(e.target.checked)}
+          />
+        </td>
         <td>
           <Skeleton variant="text" />
         </td>
         <td>
-          <div className="profile">
+          <div className={styles.profile}>
             <Skeleton variant="circular" width={24} height={24} />
             <Skeleton variant="text" />
           </div>

@@ -24,7 +24,7 @@ export const uiReducer = (state, action) => {
         ...state,
         breakpoint: payload,
         sidePanel: payload === "mobile" ? false : state.sidePanel,
-        rightPanel: payload === "desktop" ? true : false,
+        rightPanel: false,
       };
 
     case "TOGGLE_NOTIFS":

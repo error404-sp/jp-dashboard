@@ -21,6 +21,7 @@ body {
   color: var(--primary-black);
   box-sizing: border-box;
   background: var(--background);
+  scrollbar-width: thin;
 }
 
 ul {
@@ -58,9 +59,10 @@ a:hover {
 table {
   width: 95%;
   margin: 0 auto;
-  overflow-x: scroll;
+  min-width: 600px;
   border-collapse: collapse;
   margin: 0 28px;
+  scrollbar-width: thin;
 }
 
 td,
@@ -73,6 +75,7 @@ th {
 th {
   color: var(--text-light);
   border-bottom: 1px solid var(--light);
+  font-weight: 400;
 }
 
 table tbody tr {
