@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { DataContext } from "../contexts/DataContext";
 
 const useOrders = (limit = 10) => {
-  const { state } = useContext(DataContext);
+  const { state, dispatch } = useContext(DataContext);
   const { orders } = state;
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,7 +19,33 @@ const useOrders = (limit = 10) => {
     }
   };
 
-  return { paginatedOrders, currentPage, totalPages, goToPage };
+  return {
+    paginatedOrders,
+    currentPage,
+    totalPages,
+    goToPage,
+    dispatch,
+    state,
+    orders: state.orders,
+    allOrders: state.allOrders,
+    selectedOrders: state.selectedOrders,
+    sort: state.sort,
+    isFiltered: state.isFiltered,
+
+    setAllOrders: (data) => dispatch({ type: "SET_ALL_ORDERS", payload: data }),
+
+    resetOrders: () => dispatch({ type: "RESET_ORDERS" }),
+
+    toggleFilter: () => dispatch({ type: "TOGGLE_FILTER" }),
+
+    toggleSelectOrder: (orderId) =>
+      dispatch({ type: "TOGGLE_SELECT_ORDER", payload: orderId }),
+
+    applySort: (key) => dispatch({ type: "APPLY_SORT", payload: { key } }),
+
+    searchOrders: (query) =>
+      dispatch({ type: "SEARCH_ORDERS", payload: query }),
+  };
 };
 
 export default useOrders;

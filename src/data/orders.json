@@ -3,7 +3,7 @@
     {
       "id": "#CM9801",
       "user": { "name": "Natali Craig", "icon": "user1.svg" },
-      "project": "Landing Page",
+      "project": "Landing Page Redesign",
       "address": "Meadow Lane Oakland",
       "date": "Just now",
       "status": "In Progress"
@@ -11,7 +11,7 @@
     {
       "id": "#CM9802",
       "user": { "name": "Kate Morrison", "icon": "user2.svg" },
-      "project": "CRM Admin pages",
+      "project": "CRM Admin Pages",
       "address": "Larry San Francisco",
       "date": "A minute ago",
       "status": "Complete"
@@ -19,7 +19,7 @@
     {
       "id": "#CM9803",
       "user": { "name": "Drew Cano", "icon": "user3.svg" },
-      "project": "Client Project",
+      "project": "Client Portal Revamp",
       "address": "Bagwell Avenue Ocala",
       "date": "1 hour ago",
       "status": "Pending"
@@ -27,7 +27,7 @@
     {
       "id": "#CM9804",
       "user": { "name": "Orlando Diggs", "icon": "user4.svg" },
-      "project": "Admin Dashboard",
+      "project": "Analytics Dashboard",
       "address": "Washburn Baton Rouge",
       "date": "Yesterday",
       "status": "Approved"
@@ -35,7 +35,7 @@
     {
       "id": "#CM9805",
       "user": { "name": "Andi Lane", "icon": "user5.svg" },
-      "project": "App Landing Page",
+      "project": "E-commerce Mobile App",
       "address": "Nest Lane Olivette",
       "date": "Feb 2, 2023",
       "status": "Rejected"
@@ -43,7 +43,7 @@
     {
       "id": "#CM9806",
       "user": { "name": "John Smith", "icon": "user1.svg" },
-      "project": "E-commerce Site",
+      "project": "Portfolio Website",
       "address": "Pine Street Denver",
       "date": "2 hours ago",
       "status": "In Progress"
@@ -51,7 +51,7 @@
     {
       "id": "#CM9807",
       "user": { "name": "Sarah Wilson", "icon": "user2.svg" },
-      "project": "Portfolio Website",
+      "project": "Blog Platform Redesign",
       "address": "Oak Avenue Seattle",
       "date": "3 hours ago",
       "status": "Complete"
@@ -59,7 +59,7 @@
     {
       "id": "#CM9808",
       "user": { "name": "Mike Johnson", "icon": "user3.svg" },
-      "project": "Blog Platform",
+      "project": "Mobile Game Prototype",
       "address": "Maple Drive Austin",
       "date": "1 day ago",
       "status": "Pending"
@@ -67,7 +67,7 @@
     {
       "id": "#CM9809",
       "user": { "name": "Lisa Brown", "icon": "user4.svg" },
-      "project": "Mobile App",
+      "project": "Web App for Events",
       "address": "Cedar Lane Phoenix",
       "date": "2 days ago",
       "status": "Approved"
@@ -75,7 +75,7 @@
     {
       "id": "#CM9810",
       "user": { "name": "David Lee", "icon": "user5.svg" },
-      "project": "Web Application",
+      "project": "SaaS Dashboard",
       "address": "Birch Street Miami",
       "date": "3 days ago",
       "status": "Complete"
@@ -83,7 +83,7 @@
     {
       "id": "#CM9811",
       "user": { "name": "Natali Craig", "icon": "user1.svg" },
-      "project": "Landing Page",
+      "project": "Marketing Landing Page",
       "address": "Meadow Lane Oakland",
       "date": "Just now",
       "status": "In Progress"
@@ -91,23 +91,23 @@
     {
       "id": "#CM9812",
       "user": { "name": "Kate Morrison", "icon": "user2.svg" },
-      "project": "CRM Admin pages",
+      "project": "CRM Reports Module",
       "address": "Larry San Francisco",
-      "date": "A minute ago",
+      "date": "5 minutes ago",
       "status": "Complete"
     },
     {
       "id": "#CM9813",
       "user": { "name": "Drew Cano", "icon": "user3.svg" },
-      "project": "Client Project",
+      "project": "Client Dashboard",
       "address": "Bagwell Avenue Ocala",
-      "date": "1 hour ago",
+      "date": "2 hours ago",
       "status": "Pending"
     },
     {
       "id": "#CM9814",
       "user": { "name": "Orlando Diggs", "icon": "user4.svg" },
-      "project": "Admin Dashboard",
+      "project": "Finance Tracking App",
       "address": "Washburn Baton Rouge",
       "date": "Yesterday",
       "status": "Approved"
@@ -115,55 +115,55 @@
     {
       "id": "#CM9815",
       "user": { "name": "Andi Lane", "icon": "user5.svg" },
-      "project": "App Landing Page",
+      "project": "Travel Booking Platform",
       "address": "Nest Lane Olivette",
-      "date": "Feb 2, 2023",
+      "date": "Feb 5, 2023",
       "status": "Rejected"
     },
     {
       "id": "#CM9816",
       "user": { "name": "John Smith", "icon": "user1.svg" },
-      "project": "E-commerce Site",
+      "project": "Portfolio Landing Page",
       "address": "Pine Street Denver",
-      "date": "2 hours ago",
+      "date": "3 hours ago",
       "status": "In Progress"
     },
     {
       "id": "#CM9817",
       "user": { "name": "Sarah Wilson", "icon": "user2.svg" },
-      "project": "Portfolio Website",
+      "project": "E-learning Platform",
       "address": "Oak Avenue Seattle",
-      "date": "3 hours ago",
+      "date": "4 hours ago",
       "status": "Complete"
     },
     {
       "id": "#CM9818",
       "user": { "name": "Mike Johnson", "icon": "user3.svg" },
-      "project": "Blog Platform",
+      "project": "Mobile Payment App",
       "address": "Maple Drive Austin",
-      "date": "1 day ago",
+      "date": "2 days ago",
       "status": "Pending"
     },
     {
       "id": "#CM9819",
       "user": { "name": "Lisa Brown", "icon": "user4.svg" },
-      "project": "Mobile App",
+      "project": "Event Management Dashboard",
       "address": "Cedar Lane Phoenix",
-      "date": "2 days ago",
+      "date": "3 days ago",
       "status": "Approved"
     },
     {
       "id": "#CM9820",
       "user": { "name": "David Lee", "icon": "user5.svg" },
-      "project": "Web Application",
+      "project": "Inventory Management System",
       "address": "Birch Street Miami",
-      "date": "3 days ago",
+      "date": "4 days ago",
       "status": "Complete"
     },
     {
       "id": "#CM9821",
       "user": { "name": "Natali Craig", "icon": "user1.svg" },
-      "project": "Landing Page",
+      "project": "Marketing Automation Tool",
       "address": "Meadow Lane Oakland",
       "date": "Just now",
       "status": "In Progress"
@@ -171,23 +171,23 @@
     {
       "id": "#CM9822",
       "user": { "name": "Kate Morrison", "icon": "user2.svg" },
-      "project": "CRM Admin pages",
+      "project": "Customer Feedback Portal",
       "address": "Larry San Francisco",
-      "date": "A minute ago",
+      "date": "10 minutes ago",
       "status": "Complete"
     },
     {
       "id": "#CM9823",
       "user": { "name": "Drew Cano", "icon": "user3.svg" },
-      "project": "Client Project",
+      "project": "Team Collaboration App",
       "address": "Bagwell Avenue Ocala",
-      "date": "1 hour ago",
+      "date": "3 hours ago",
       "status": "Pending"
     },
     {
       "id": "#CM9824",
       "user": { "name": "Orlando Diggs", "icon": "user4.svg" },
-      "project": "Admin Dashboard",
+      "project": "HR Management System",
       "address": "Washburn Baton Rouge",
       "date": "Yesterday",
       "status": "Approved"
@@ -195,55 +195,55 @@
     {
       "id": "#CM9825",
       "user": { "name": "Andi Lane", "icon": "user5.svg" },
-      "project": "App Landing Page",
+      "project": "Social Media Dashboard",
       "address": "Nest Lane Olivette",
-      "date": "Feb 2, 2023",
+      "date": "Feb 7, 2023",
       "status": "Rejected"
     },
     {
       "id": "#CM9826",
       "user": { "name": "John Smith", "icon": "user1.svg" },
-      "project": "E-commerce Site",
+      "project": "Online Course Platform",
       "address": "Pine Street Denver",
-      "date": "2 hours ago",
+      "date": "4 hours ago",
       "status": "In Progress"
     },
     {
       "id": "#CM9827",
       "user": { "name": "Sarah Wilson", "icon": "user2.svg" },
-      "project": "Portfolio Website",
+      "project": "Inventory Analytics Tool",
       "address": "Oak Avenue Seattle",
-      "date": "3 hours ago",
+      "date": "5 hours ago",
       "status": "Complete"
     },
     {
       "id": "#CM9828",
       "user": { "name": "Mike Johnson", "icon": "user3.svg" },
-      "project": "Blog Platform",
+      "project": "Mobile Health Tracker",
       "address": "Maple Drive Austin",
-      "date": "1 day ago",
+      "date": "2 days ago",
       "status": "Pending"
     },
     {
       "id": "#CM9829",
       "user": { "name": "Lisa Brown", "icon": "user4.svg" },
-      "project": "Mobile App",
+      "project": "Recruitment Platform",
       "address": "Cedar Lane Phoenix",
-      "date": "2 days ago",
+      "date": "3 days ago",
       "status": "Approved"
     },
     {
       "id": "#CM9830",
       "user": { "name": "David Lee", "icon": "user5.svg" },
-      "project": "Web Application",
+      "project": "IoT Dashboard",
       "address": "Birch Street Miami",
-      "date": "3 days ago",
+      "date": "4 days ago",
       "status": "Complete"
     },
     {
       "id": "#CM9831",
       "user": { "name": "Natali Craig", "icon": "user1.svg" },
-      "project": "Landing Page",
+      "project": "AI Chatbot Interface",
       "address": "Meadow Lane Oakland",
       "date": "Just now",
       "status": "In Progress"
@@ -251,23 +251,23 @@
     {
       "id": "#CM9832",
       "user": { "name": "Kate Morrison", "icon": "user2.svg" },
-      "project": "CRM Admin pages",
+      "project": "Travel Itinerary Planner",
       "address": "Larry San Francisco",
-      "date": "A minute ago",
+      "date": "15 minutes ago",
       "status": "Complete"
     },
     {
       "id": "#CM9833",
       "user": { "name": "Drew Cano", "icon": "user3.svg" },
-      "project": "Client Project",
+      "project": "Fitness Tracker App",
       "address": "Bagwell Avenue Ocala",
-      "date": "1 hour ago",
+      "date": "4 hours ago",
       "status": "Pending"
     },
     {
       "id": "#CM9834",
       "user": { "name": "Orlando Diggs", "icon": "user4.svg" },
-      "project": "Admin Dashboard",
+      "project": "Restaurant Reservation System",
       "address": "Washburn Baton Rouge",
       "date": "Yesterday",
       "status": "Approved"
@@ -275,55 +275,55 @@
     {
       "id": "#CM9835",
       "user": { "name": "Andi Lane", "icon": "user5.svg" },
-      "project": "App Landing Page",
+      "project": "Content Management Tool",
       "address": "Nest Lane Olivette",
-      "date": "Feb 2, 2023",
+      "date": "Feb 10, 2023",
       "status": "Rejected"
     },
     {
       "id": "#CM9836",
       "user": { "name": "John Smith", "icon": "user1.svg" },
-      "project": "E-commerce Site",
+      "project": "Video Streaming Platform",
       "address": "Pine Street Denver",
-      "date": "2 hours ago",
+      "date": "6 hours ago",
       "status": "In Progress"
     },
     {
       "id": "#CM9837",
       "user": { "name": "Sarah Wilson", "icon": "user2.svg" },
-      "project": "Portfolio Website",
+      "project": "Email Marketing Dashboard",
       "address": "Oak Avenue Seattle",
-      "date": "3 hours ago",
+      "date": "7 hours ago",
       "status": "Complete"
     },
     {
       "id": "#CM9838",
       "user": { "name": "Mike Johnson", "icon": "user3.svg" },
-      "project": "Blog Platform",
+      "project": "Payment Gateway Integration",
       "address": "Maple Drive Austin",
-      "date": "1 day ago",
+      "date": "3 days ago",
       "status": "Pending"
     },
     {
       "id": "#CM9839",
       "user": { "name": "Lisa Brown", "icon": "user4.svg" },
-      "project": "Mobile App",
+      "project": "Warehouse Management Tool",
       "address": "Cedar Lane Phoenix",
-      "date": "2 days ago",
+      "date": "4 days ago",
       "status": "Approved"
     },
     {
       "id": "#CM9840",
       "user": { "name": "David Lee", "icon": "user5.svg" },
-      "project": "Web Application",
+      "project": "IoT Device Controller",
       "address": "Birch Street Miami",
-      "date": "3 days ago",
+      "date": "5 days ago",
       "status": "Complete"
     },
     {
       "id": "#CM9841",
       "user": { "name": "Natali Craig", "icon": "user1.svg" },
-      "project": "Landing Page",
+      "project": "Customer Loyalty App",
       "address": "Meadow Lane Oakland",
       "date": "Just now",
       "status": "In Progress"
@@ -331,23 +331,23 @@
     {
       "id": "#CM9842",
       "user": { "name": "Kate Morrison", "icon": "user2.svg" },
-      "project": "CRM Admin pages",
+      "project": "Event Ticketing Platform",
       "address": "Larry San Francisco",
-      "date": "A minute ago",
+      "date": "20 minutes ago",
       "status": "Complete"
     },
     {
       "id": "#CM9843",
       "user": { "name": "Drew Cano", "icon": "user3.svg" },
-      "project": "Client Project",
+      "project": "Online Polling System",
       "address": "Bagwell Avenue Ocala",
-      "date": "1 hour ago",
+      "date": "5 hours ago",
       "status": "Pending"
     },
     {
       "id": "#CM9844",
       "user": { "name": "Orlando Diggs", "icon": "user4.svg" },
-      "project": "Admin Dashboard",
+      "project": "HR Recruitment Portal",
       "address": "Washburn Baton Rouge",
       "date": "Yesterday",
       "status": "Approved"
@@ -355,49 +355,49 @@
     {
       "id": "#CM9845",
       "user": { "name": "Andi Lane", "icon": "user5.svg" },
-      "project": "App Landing Page",
+      "project": "Virtual Reality Tour App",
       "address": "Nest Lane Olivette",
-      "date": "Feb 2, 2023",
+      "date": "Feb 12, 2023",
       "status": "Rejected"
     },
     {
       "id": "#CM9846",
       "user": { "name": "John Smith", "icon": "user1.svg" },
-      "project": "E-commerce Site",
+      "project": "AI-Powered Analytics",
       "address": "Pine Street Denver",
-      "date": "2 hours ago",
+      "date": "8 hours ago",
       "status": "In Progress"
     },
     {
       "id": "#CM9847",
       "user": { "name": "Sarah Wilson", "icon": "user2.svg" },
-      "project": "Portfolio Website",
+      "project": "Recipe Sharing Platform",
       "address": "Oak Avenue Seattle",
-      "date": "3 hours ago",
+      "date": "9 hours ago",
       "status": "Complete"
     },
     {
       "id": "#CM9848",
       "user": { "name": "Mike Johnson", "icon": "user3.svg" },
-      "project": "Blog Platform",
+      "project": "Blockchain Wallet",
       "address": "Maple Drive Austin",
-      "date": "1 day ago",
+      "date": "4 days ago",
       "status": "Pending"
     },
     {
       "id": "#CM9849",
       "user": { "name": "Lisa Brown", "icon": "user4.svg" },
-      "project": "Mobile App",
+      "project": "Smart Home Controller",
       "address": "Cedar Lane Phoenix",
-      "date": "2 days ago",
+      "date": "5 days ago",
       "status": "Approved"
     },
     {
       "id": "#CM9850",
       "user": { "name": "David Lee", "icon": "user5.svg" },
-      "project": "Web Application",
+      "project": "Online Learning Hub",
       "address": "Birch Street Miami",
-      "date": "3 days ago",
+      "date": "6 days ago",
       "status": "Complete"
     }
   ]

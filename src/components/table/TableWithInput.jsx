@@ -15,7 +15,7 @@ const TableWithInput = ({ orders, isLoading, limit = 10 }) => {
               <input type="checkbox" disabled />
             </th>
             {orderColumns.map((header, idx) => (
-              <th key={idx}>{header}</th>
+              <th key={idx}>{header} </th>
             ))}
           </tr>
         </thead>

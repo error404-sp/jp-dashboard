@@ -8,13 +8,35 @@
 }
 
 .tableActions {
-  margin: 0 28px;
   border-radius: 8px;
   background: var(--hover-bg);
   padding: 8px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .tableContainer {
   overflow-x: auto;
   scrollbar-width: thin;
+}
+
+button:disabled {
+  cursor: "not-allowed";
+  opacity: 0.5;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-black);
+  border-radius: 5px;
+  height: 28px;
+}
+
+.search input {
+  outline: none;
+  border: none;
+  margin-bottom: 10px;
+  height: 90%;
+  background: inherit;
 }

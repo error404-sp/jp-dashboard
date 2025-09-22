@@ -1,7 +1,11 @@
 export const dataInitialState = {
   favourites: [],
-  orders: [],
   activePage: null,
+  allOrders: [],
+  orders: [],
+  selectedOrders: [],
+  sort: { key: null, direction: null },
+  isFiltered: false,
 };
 
 export const dataReducer = (state, action) => {
@@ -21,24 +25,99 @@ export const dataReducer = (state, action) => {
           (fav) => fav.id !== action.payload.id
         ),
       };
-    case "SET_ORDERS":
+    case "SET_ALL_ORDERS":
       return {
         ...state,
+        allOrders: action.payload,
         orders: action.payload,
         selectedOrders: [],
+        sort: { key: null, direction: null },
+        isFiltered: false,
       };
 
-    case "TOGGLE_ORDER_SELECTION":
-      const { id, selected } = action.payload;
+    case "RESET_ORDERS":
       return {
         ...state,
-        selectedOrders: selected
-          ? [...state.selectedOrders, id]
-          : state.selectedOrders.filter((orderId) => orderId !== id),
+        orders: state.allOrders,
+        selectedOrders: [],
+        sort: { key: null, direction: null },
+        isFiltered: false,
       };
 
-    case "ADD_ORDER":
-      return { ...state, orders: [...state.orders, action.payload] };
+    case "TOGGLE_FILTER": {
+      const baseOrders =
+        state.selectedOrders.length > 0
+          ? state.allOrders.filter((o) => state.selectedOrders.includes(o.id))
+          : state.allOrders;
+
+      const isCurrentlyFiltered = state.isFiltered;
+      const isFiltered =
+        state.selectedOrders.length == 0
+          ? !isCurrentlyFiltered
+          : isCurrentlyFiltered;
+
+      return {
+        ...state,
+        orders: isCurrentlyFiltered ? state.allOrders : baseOrders,
+        isFiltered: isFiltered,
+        selectedOrders: isFiltered ? state.selectedOrders : [],
+      };
+    }
+
+    case "APPLY_SORT": {
+      const sortKey = action.payload.key;
+      let sortDirection = "asc";
+
+      if (state.sort.key === sortKey) {
+        if (state.sort.direction === "asc") sortDirection = "desc";
+        else if (state.sort.direction === "desc") sortDirection = null;
+        else sortDirection = "asc";
+      }
+
+      let sortedOrders = [...state.orders];
+      if (sortDirection) {
+        sortedOrders.sort((a, b) => {
+          if (a[sortKey] < b[sortKey]) return sortDirection === "asc" ? -1 : 1;
+          if (a[sortKey] > b[sortKey]) return sortDirection === "asc" ? 1 : -1;
+          return 0;
+        });
+      } else {
+        sortedOrders.sort((a, b) => {
+          if (a.id < b.id) return -1;
+          if (a.id > b.id) return 1;
+          return 0;
+        });
+      }
+
+      return {
+        ...state,
+        sort: { key: sortDirection ? sortKey : null, direction: sortDirection },
+        orders: sortedOrders,
+      };
+    }
+
+    case "SEARCH_ORDERS": {
+      const query = action.payload?.toLowerCase() || "";
+      return {
+        ...state,
+        orders: state.allOrders.filter(
+          (order) =>
+            Object.values(order).some((val) =>
+              String(val).toLowerCase().includes(query)
+            ) || order?.user?.name.toLowerCase().includes(query)
+        ),
+      };
+    }
+
+    case "TOGGLE_SELECT_ORDER": {
+      const orderId = action.payload;
+      return {
+        ...state,
+        selectedOrders: state.selectedOrders.includes(orderId)
+          ? state.selectedOrders.filter((id) => id !== orderId)
+          : [...state.selectedOrders, orderId],
+      };
+    }
 
     default:
       return state;

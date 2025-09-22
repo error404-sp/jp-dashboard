@@ -1,5 +1,12 @@
 .orderList {
+  margin: 28px;
 }
 
 .orderActions {
+}
+
+h2 {
+  font-size: var(--font-regular);
+  font-weight: bold;
+  color: var(--primary-black);
 }

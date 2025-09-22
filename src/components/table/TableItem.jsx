@@ -3,18 +3,12 @@ import { DataContext } from "../../contexts/DataContext";
 import CustomProfile from "../../ui/CustomProfile";
 import { Skeleton } from "@mui/material";
 import styles from "./table.module.css";
+import { CalendarTodayOutlined } from "@mui/icons-material";
+import ThemeIcon from "../../ui/ThemeIcon";
+import useOrders from "../../hooks/useOrders";
 
 const TableItem = ({ item, isLoading }) => {
-  const { state, dispatch } = useContext(DataContext);
-
-  const isChecked = item ? state.selectedOrders.includes(item.id) : false;
-
-  const handleCheckboxChange = (checked) => {
-    dispatch({
-      type: "TOGGLE_ORDER_SELECTION",
-      payload: { id: item.id, selected: checked },
-    });
-  };
+  const { toggleSelectOrder, selectedOrders } = useOrders();
 
   if (isLoading) {
     return (
@@ -22,8 +16,8 @@ const TableItem = ({ item, isLoading }) => {
         <td>
           <input
             type="checkbox"
-            checked={isChecked}
-            onChange={(e) => handleCheckboxChange(e.target.checked)}
+            checked={selectedOrders.includes(item?.id)}
+            onChange={() => toggleSelectOrder(item?.id)}
           />
         </td>
         <td>
@@ -57,8 +51,8 @@ const TableItem = ({ item, isLoading }) => {
       <td>
         <input
           type="checkbox"
-          checked={isChecked}
-          onChange={(e) => handleCheckboxChange(e.target.checked)}
+          checked={selectedOrders.includes(item?.id)}
+          onChange={() => toggleSelectOrder(item?.id)}
         />
       </td>
 
@@ -71,7 +65,10 @@ const TableItem = ({ item, isLoading }) => {
 
       <td>{item.project}</td>
       <td>{item.address}</td>
-      <td>{item.date}</td>
+      <td>
+        <ThemeIcon icon={CalendarTodayOutlined} />
+        {item.date}
+      </td>
 
       <td
         style={{

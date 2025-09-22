@@ -9,8 +9,14 @@ import Pagination from "../../components/table/Pagination";
 import * as orderData from "../../data/orders.json";
 
 const OrderList = () => {
-  const { state, dispatch } = useContext(DataContext);
-  const { paginatedOrders, currentPage, totalPages, goToPage } = useOrders(10);
+  const {
+    paginatedOrders,
+    currentPage,
+    totalPages,
+    goToPage,
+    orders,
+    setAllOrders,
+  } = useOrders(10);
   const { isLoading, withLoading } = useLoading(true, 1000);
 
   const fetchOrders = async () => {
@@ -18,7 +24,7 @@ const OrderList = () => {
       await withLoading(async () => {
         const data = orderData.orders;
         // const data = await res.json();
-        dispatch({ type: "SET_ORDERS", payload: data });
+        setAllOrders(data);
       });
     } catch (err) {
       console.error("Error fetching orders:", err);

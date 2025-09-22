@@ -18,18 +18,10 @@ export const sidePanelConfig = [
     children: [
       {
         id: 2,
-        type: "sub-category",
+        type: "page",
         label: "Default",
         path: "/",
         icon: DonutSmallTwoTone,
-        children: [
-          {
-            id: 5,
-            type: "page",
-            label: "Orders",
-            path: "/orders",
-          },
-        ],
       },
       {
         id: 3,
