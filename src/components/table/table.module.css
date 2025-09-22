@@ -40,3 +40,7 @@ button:disabled {
   height: 90%;
   background: inherit;
 }
+
+.iconColor path {
+  color: var(--border-black);
+}

@@ -11,7 +11,7 @@ const Search = () => {
         icon={SearchOutlined}
         width={16}
         height={16}
-        style={{ color: "var(--border-black)" }}
+        className={styles.iconColor}
       />
       <input
         type="text"

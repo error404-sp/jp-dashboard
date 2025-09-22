@@ -3,19 +3,19 @@ import { sidePanelConfig } from "../../config/sidePanelConfig";
 import Item from "./Item";
 import styles from "./sidePanel.module.css";
 import { DataContext } from "../../contexts/DataContext";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { LogoIcon } from "../../ui/LogoIcon";
 
 const SidePanel = () => {
   const { state, dispatch } = useContext(DataContext);
   return (
     <nav className={styles.sidePanel}>
-      <Link path="/">
+      <NavLink to={"/"}>
         <div className={styles.logoDiv}>
           <LogoIcon />
           <p>ByeWind</p>
         </div>
-      </Link>
+      </NavLink>
       <div style={{ marginLeft: 10 }}>
         <div className={styles.categoryItem}>Favourites</div>
         {state.favourites?.map((child) => (
