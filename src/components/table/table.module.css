@@ -41,6 +41,6 @@ button:disabled {
   background: inherit;
 }
 
-.iconColor path {
+.search svg path {
   color: var(--border-black);
 }
