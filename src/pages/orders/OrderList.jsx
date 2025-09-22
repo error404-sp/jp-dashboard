@@ -34,6 +34,7 @@ const OrderList = () => {
   useEffect(() => {
     fetchOrders();
   }, []);
+
   return (
     <section className={styles.orderList}>
       <h2>Order List</h2>

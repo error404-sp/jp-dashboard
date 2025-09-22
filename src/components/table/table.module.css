@@ -16,7 +16,8 @@
 }
 
 .tableContainer {
-  overflow-x: auto;
+  overflow: auto;
+  min-width: 800px;
   scrollbar-width: thin;
 }
 
@@ -43,4 +44,35 @@ button:disabled {
 
 .search svg path {
   color: var(--border-black);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.pageButton,
+.navButton {
+  background: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pageButton:hover,
+.navButton:hover {
+  background: #f0f0f0;
+}
+
+.pageButton.active {
+  background: var(--border-black);
+}
+
+.navButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }

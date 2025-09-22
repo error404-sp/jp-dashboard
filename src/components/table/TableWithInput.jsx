@@ -17,7 +17,7 @@ const TableWithInput = ({ orders, isLoading, limit = 10 }) => {
               <input
                 type="checkbox"
                 checked={selectedOrders.length > 0}
-                onClick={() => {
+                onChange={() => {
                   resetOrders();
                 }}
               />

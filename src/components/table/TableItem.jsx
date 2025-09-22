@@ -17,7 +17,7 @@ const TableItem = ({ item, isLoading }) => {
           <input
             type="checkbox"
             checked={selectedOrders.includes(item?.id)}
-            onChange={() => toggleSelectOrder(item?.id)}
+            onClick={() => toggleSelectOrder(item?.id)}
           />
         </td>
         <td>
@@ -47,12 +47,13 @@ const TableItem = ({ item, isLoading }) => {
   }
 
   return (
-    <tr>
+    <tr onClick={() => toggleSelectOrder(item?.id)}>
       <td>
         <input
           type="checkbox"
           checked={selectedOrders.includes(item?.id)}
           onChange={() => toggleSelectOrder(item?.id)}
+          onClick={() => toggleSelectOrder(item?.id)}
         />
       </td>
 

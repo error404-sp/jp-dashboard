@@ -59,7 +59,8 @@ a:hover {
 table {
   width: 95%;
   margin: 0 auto;
-  min-width: 600px;
+  min-width: 800px;
+  overflow: auto;
   border-collapse: collapse;
   scrollbar-width: thin;
 }

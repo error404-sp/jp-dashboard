@@ -45,22 +45,19 @@ export const dataReducer = (state, action) => {
       };
 
     case "TOGGLE_FILTER": {
+      const newFilterState = !state.isFiltered;
+
+      // Always compute from allOrders — never from state.orders
       const baseOrders =
         state.selectedOrders.length > 0
           ? state.allOrders.filter((o) => state.selectedOrders.includes(o.id))
           : state.allOrders;
 
-      const isCurrentlyFiltered = state.isFiltered;
-      const isFiltered =
-        state.selectedOrders.length == 0
-          ? !isCurrentlyFiltered
-          : isCurrentlyFiltered;
-
       return {
         ...state,
-        orders: isCurrentlyFiltered ? state.allOrders : baseOrders,
-        isFiltered: isFiltered,
-        selectedOrders: isFiltered ? state.selectedOrders : [],
+        orders: newFilterState ? baseOrders : [...state.allOrders],
+        isFiltered: newFilterState,
+        selectedOrders: [],
       };
     }
 

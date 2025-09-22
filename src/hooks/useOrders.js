@@ -1,17 +1,20 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { DataContext } from "../contexts/DataContext";
 
 const useOrders = (limit = 10) => {
   const { state, dispatch } = useContext(DataContext);
-  const { orders } = state;
 
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(orders.length / limit);
+  const totalPages = Math.ceil(state.orders.length / limit);
 
-  const paginatedOrders = orders.slice(
+  const paginatedOrders = state.orders.slice(
     (currentPage - 1) * limit,
     (currentPage - 1) * limit + limit
   );
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [state.orders]);
 
   const goToPage = (page) => {
     if (page >= 1 && page <= totalPages) {
