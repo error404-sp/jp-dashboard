@@ -74,11 +74,13 @@ const TableItem = ({ item, isLoading }) => {
         style={{
           color:
             item.status === "Pending"
-              ? "orange"
-              : item.status === "Complete"
-              ? "green"
-              : item.status == "Rejected"
-              ? "red"
+              ? "#59A8D4"
+              : item.status === "In Progress"
+              ? "#8A8CD9"
+              : item.status == "Complete"
+              ? "#4AA785"
+              : item.status == "Approved"
+              ? "#FFC555"
               : "gray",
         }}
       >
