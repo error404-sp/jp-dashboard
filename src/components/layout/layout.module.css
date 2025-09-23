@@ -6,8 +6,8 @@
 .rightPanel {
   border-left: 1px solid var(--border-black);
   justify-self: flex-end;
-  min-width: 250px;
-  max-width: 25vw;
+  min-width: 200px;
+  max-width: 20vw;
 }
 
 .navBar {
@@ -29,4 +29,62 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 4px;
+}
+
+.rightPanel {
+  border-left: 1px solid var(--border-black);
+  justify-self: flex-end;
+  background: var(--background);
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1000;
+}
+
+.modalContent {
+  width: 80%;
+  max-width: 400px;
+  height: 100%;
+  background: var(--background);
+  padding: 1rem;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  position: relative;
+  transform: translateX(100%);
+  animation: slideIn 0.3s forwards;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-black);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.rightPanel > div,
+.modalContent > div {
+  margin-bottom: 1rem;
 }

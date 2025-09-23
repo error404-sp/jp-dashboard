@@ -1,16 +1,37 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import styles from "./layout.module.css";
 import { UIContext } from "../../contexts/UIContext";
 
 const RightPanel = () => {
-  const { state } = useContext(UIContext);
+  const { state, dispatch } = useContext(UIContext);
+  const { breakpoint, rightPanel, showNotif, showRecent } = state;
+
+  const handleClose = () => dispatch({ type: "CLOSE_RIGHT_PANEL" });
+
+  if (breakpoint === "desktop") {
+    return (
+      <div className={styles.rightPanel}>
+        {showNotif && <div>Notifications</div>}
+        {showRecent && <div>Recents</div>}
+        <div>Contacts</div>
+      </div>
+    );
+  }
+
+  if (!rightPanel) return null;
+
   return (
-    <div className={styles.rightPanel}>
-      RightPanel
-      {state.showNotif && <div>Notifications</div>}
-      {state.showRecent && <div>Recents</div>}
-      <div>Contacts</div>
+    <div className={styles.modalOverlay} onClick={handleClose}>
+      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+        <button className={styles.closeBtn} onClick={handleClose}>
+          &times;
+        </button>
+        {showNotif && <div>Notifications</div>}
+        {showRecent && <div>Recents</div>}
+        <div>Contacts</div>
+      </div>
     </div>
   );
 };
+
 export default RightPanel;

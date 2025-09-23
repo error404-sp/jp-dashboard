@@ -33,7 +33,6 @@ export default function LocationWise() {
 
     const tooltip = d3.select(tooltipRef.current);
 
-    // Height is automatically based on container's aspect ratio
     const height = containerRef.current.offsetHeight;
 
     const projection = d3
@@ -79,7 +78,7 @@ export default function LocationWise() {
     <div className={styles.locationMapWrapper}>
       <span className={styles.title}>Revenue by Location</span>
       <div ref={containerRef} className={styles.locationMapContainer}>
-        <svg ref={svgRef} width={width} height="100%" />
+        <svg ref={svgRef} width={width - 30} height="100%" />
         <div ref={tooltipRef} className={styles.locationMapTooltip} />
       </div>
 

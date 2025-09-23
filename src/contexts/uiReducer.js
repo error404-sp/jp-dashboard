@@ -18,6 +18,9 @@ export const uiReducer = (state, action) => {
     case "TOGGLE_RIGHTPANEL":
       return { ...state, rightPanel: !state.rightPanel };
 
+    case "CLOSE_RIGHT_PANEL":
+      return { ...state, rightPanel: false };
+
     case "SET_BREAKPOINT":
       const payload = action.payload;
       return {
