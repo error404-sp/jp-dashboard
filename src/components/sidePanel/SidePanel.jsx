@@ -14,7 +14,6 @@ const SidePanel = () => {
   const { breakpoint, sidePanel } = uiState;
   const handleClose = () => uiDispatch({ type: "CLOSE_SIDE_PANEL" });
 
-  // Desktop: normal sidebar
   if (breakpoint === "desktop") {
     return (
       <nav className={styles.sidePanel}>

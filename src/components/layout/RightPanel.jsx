@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import styles from "./layout.module.css";
 import { UIContext } from "../../contexts/UIContext";
+import Contacts from "../rightPanel/Contacts";
+import Navbar from "./Navbar";
 
 const RightPanel = () => {
   const { state, dispatch } = useContext(UIContext);
@@ -13,7 +15,7 @@ const RightPanel = () => {
       <div className={styles.rightPanel}>
         {showNotif && <div>Notifications</div>}
         {showRecent && <div>Recents</div>}
-        <div>Contacts</div>
+        <Contacts />
       </div>
     );
   }
@@ -28,7 +30,7 @@ const RightPanel = () => {
         </button>
         {showNotif && <div>Notifications</div>}
         {showRecent && <div>Recents</div>}
-        <div>Contacts</div>
+        <Contacts />
       </div>
     </div>
   );
