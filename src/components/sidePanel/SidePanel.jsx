@@ -7,6 +7,20 @@ import { DataContext } from "../../contexts/DataContext";
 import { UIContext } from "../../contexts/UIContext";
 import { sidePanelConfig } from "../../config/sidePanelConfig";
 
+const favourites = [
+  {
+    id: 1,
+    type: "page",
+    label: "Default",
+    path: "/",
+  },
+  {
+    id: 2,
+    type: "page",
+    label: "Orders",
+    path: "/orders",
+  },
+];
 const SidePanel = () => {
   const { state: uiState, dispatch: uiDispatch } = useContext(UIContext);
   const { state } = useContext(DataContext);
@@ -26,7 +40,7 @@ const SidePanel = () => {
 
         <div style={{ marginLeft: 10 }}>
           <div className={styles.categoryItem}>Favourites</div>
-          {state.favourites?.map((child) => (
+          {favourites?.map((child) => (
             <Item key={child.id} item={child} level={1} />
           ))}
         </div>
@@ -59,7 +73,7 @@ const SidePanel = () => {
 
         <div style={{ marginLeft: 10 }}>
           <div className={styles.categoryItem}>Favourites</div>
-          {state.favourites?.map((child) => (
+          {favourites?.map((child) => (
             <Item key={child.id} item={child} level={1} />
           ))}
         </div>

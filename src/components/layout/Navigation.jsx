@@ -8,15 +8,17 @@ const Navigation = () => {
   const getLocation = () => {
     switch (location.pathname) {
       case "/":
-        return `Default / Dashboard`;
+        return `Dashboard  /  Default`;
       case "/orders":
-        return `eCommerce / Orders`;
+        return `eCommerce  /  Orders`;
     }
   };
 
   return (
     <div className={styles.navigation}>
-      <p fontSize={12}>{getLocation()}</p>
+      <p fontSize={12} fontWeight={500}>
+        {getLocation()}
+      </p>
       <div className={styles.searchDiv}>
         <ThemeIcon
           icon={SearchOutlined}

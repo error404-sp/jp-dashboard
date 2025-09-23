@@ -32,7 +32,7 @@ const RightPanel = () => {
           &times;
         </button>
         <MiniNav />
-        {showNotif && <div>Notifications</div>}
+        {showNotif && <Notifications />}
         {showRecent && <Activities />}
         <Contacts />
       </div>
