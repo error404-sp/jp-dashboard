@@ -174,14 +174,13 @@
 }
 
 .locationMapWrapper {
-  width: 200px;
+  width: 20%;
   padding: 12px;
   background: var(--hover-bg);
   justify-content: center;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  gap: 8px;
   margin: auto;
   font-family: "Inter", sans-serif;
 }
@@ -195,8 +194,8 @@
 
 .locationMapContainer {
   position: relative;
-  width: 200px;
-  height: 120px;
+  width: 100%;
+  height: auto;
 }
 
 .locationMapTooltip {
@@ -242,6 +241,25 @@
   transition: width 0.8s ease-in-out;
 }
 
+.locationMapContainer {
+  width: 95%;
+  min-width: 200px;
+  aspect-ratio: 16 / 9;
+}
+
+.locationMapTooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--background);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: var(--font-small);
+  color: var(--primary-black);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
 .productsTable {
   min-width: 400px;
   width: 60%;
@@ -254,19 +272,112 @@
   width: 100%;
 }
 
+.container {
+  border-radius: 16px;
+  padding: 20px;
+  background: var(--hover-bg);
+  color: var(--primary-black);
+  height: 100%;
+  width: 20%;
+  animation: fade-in 0.3s ease-in-out;
+}
+
+.title {
+  font-size: var(--font-small);
+  font-weight: 600;
+}
+
+.chartWrapper {
+  /* margin-top: 0.5rem; */
+}
+
+.chart {
+  width: 100%;
+  /* height: 120px; */
+}
+
+.pie {
+  stroke: var(--background);
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.itemLeft {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dot {
+  font-size: 14px;
+}
+
+.dot1 {
+  color: var(--color1);
+}
+.dot2 {
+  color: var(--color4);
+}
+
+.itemName {
+  font-size: var(--font-small);
+  font-weight: 400;
+  color: var(--primary-black);
+}
+
+.itemPrice {
+  font-size: var(--font-small);
+  font-weight: 400;
+  color: var(--primary-black);
+}
+
+.tooltipWrapper {
+  background: var(--background) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 10px !important;
+  color: var(--primary-black) !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 12px !important;
+}
+
+.percentage {
+  font-family: "Rubik", sans-serif;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 1024px) {
   .metricsDiv,
-  .monthWise {
+  .monthWise,
+  .productsTable,
+  .revenueWrapper,
+  .container {
     width: 90%;
     justify-content: center;
     gap: 28px;
   }
-}
+  .locationMapWrapper {
+    width: 90%;
 
-@media (max-width: 768px) {
-  .productsTable,
-  .revenueWrapper {
-    width: 95%;
+    gap: 28px;
   }
 }
 

@@ -1,26 +1,40 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 import * as topojson from "topojson-client";
 import * as worldData from "../../data/countries-110m.json";
 import styles from "./dashboard.module.css";
 import useMetrics from "../../hooks/useMetrics";
 
-export default function LocationWise({ isLoading }) {
+export default function LocationWise() {
   const svgRef = useRef();
+  const containerRef = useRef();
   const tooltipRef = useRef();
-  const width = 200;
-  const height = 120;
-  if (isLoading) {
-    return <Skeleton width={200} height={120} />;
-  }
+  const [width, setWidth] = useState(0);
+
   const { charts } = useMetrics();
   const { revenueByLocation } = charts;
 
   useEffect(() => {
+    const updateWidth = () => {
+      if (containerRef.current) {
+        setWidth(containerRef.current.offsetWidth);
+      }
+    };
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
+
+  useEffect(() => {
+    if (!width) return;
+
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
 
     const tooltip = d3.select(tooltipRef.current);
+
+    // Height is automatically based on container's aspect ratio
+    const height = containerRef.current.offsetHeight;
 
     const projection = d3
       .geoNaturalEarth1()
@@ -29,7 +43,6 @@ export default function LocationWise({ isLoading }) {
 
     const path = d3.geoPath(projection);
 
-    // Draw countries
     const countries = topojson.feature(
       worldData,
       worldData.objects.countries
@@ -60,13 +73,13 @@ export default function LocationWise({ isLoading }) {
           .text(d.name);
       })
       .on("mouseleave", () => tooltip.style("opacity", 0));
-  }, [isLoading, revenueByLocation]);
+  }, [revenueByLocation, width]);
 
   return (
     <div className={styles.locationMapWrapper}>
       <span className={styles.title}>Revenue by Location</span>
-      <div className={styles.locationMapContainer}>
-        <svg ref={svgRef} width={width} height={height} />
+      <div ref={containerRef} className={styles.locationMapContainer}>
+        <svg ref={svgRef} width={width} height="100%" />
         <div ref={tooltipRef} className={styles.locationMapTooltip} />
       </div>
 

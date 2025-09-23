@@ -6,7 +6,6 @@
   display: flex;
   flex-wrap: wrap;
   margin: 16px 0;
-  border: 1px solid black;
   gap: 28px;
 }
 

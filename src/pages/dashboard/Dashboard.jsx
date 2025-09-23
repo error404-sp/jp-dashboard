@@ -30,7 +30,7 @@ const Dashboard = () => {
         <RevenueWeekly />
         {isLoading ? <Skeleton /> : <LocationWise />}
         <ProductsTable />
-        <TotalSales />
+        {isLoading ? <Skeleton /> : <TotalSales />}
       </div>
     </div>
   );
