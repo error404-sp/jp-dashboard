@@ -7,7 +7,7 @@
   border-left: 1px solid var(--border-black);
   justify-self: flex-end;
   min-width: 200px;
-  max-width: 20vw;
+  max-width: 20%;
 }
 
 .navBar {
@@ -87,4 +87,19 @@
 .rightPanel > div,
 .modalContent > div {
   margin-bottom: 1rem;
+}
+
+.navBar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  margin: 2px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navBar button.active {
+  background: var(--border-black);
+  color: var(--primary-black);
 }

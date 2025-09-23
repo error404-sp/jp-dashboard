@@ -18,6 +18,9 @@ export const uiReducer = (state, action) => {
     case "TOGGLE_RIGHTPANEL":
       return { ...state, rightPanel: !state.rightPanel };
 
+    case "CLOSE_SIDE_PANEL":
+      return { ...state, sidePanel: false };
+
     case "CLOSE_RIGHT_PANEL":
       return { ...state, rightPanel: false };
 

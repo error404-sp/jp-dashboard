@@ -86,7 +86,7 @@
       { "name": "Singapore", "coords": [103.8198, 1.3521], "revenue": 61000 }
     ],
     "sales": [
-      { "name": "Direct", "value": 200.56, "color": "#1C1C1C" },
+      { "name": "Direct", "value": 200.56, "color": "var(--primary-black)" },
       { "name": "Affiliate", "value": 135.18, "color": "#BAEDBD" },
       { "name": "Sponsored", "value": 154.02, "color": "#95A4FC" },
       { "name": "E-mail", "value": 88.96, "color": "#B1E3FF" }

@@ -24,3 +24,48 @@
   margin-left: 10px;
   column-gap: 8px;
 }
+
+.sidePanelModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: flex-start;
+  z-index: 1000;
+}
+
+.sidePanelModalContent {
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  background: var(--background);
+  padding: 1rem;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  position: relative;
+  transform: translateX(-100%);
+  animation: sidePanelSlideIn 0.3s forwards;
+}
+
+@keyframes sidePanelSlideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.sidePanelCloseBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-black);
+}

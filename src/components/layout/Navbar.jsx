@@ -27,6 +27,7 @@ const Navbar = () => {
         type="button"
         aria-label="Toggle side panel"
         onClick={toggleSidePanel}
+        className={state.sidePanel ? styles.active : ""}
       >
         <ThemeIcon icon={ViewSidebarTwoTone} />
       </button>
@@ -35,7 +36,12 @@ const Navbar = () => {
       </button>
       <Navigation />
 
-      <button type="button" aria-label="Change theme" onClick={toggleTheme}>
+      <button
+        type="button"
+        aria-label="Change theme"
+        onClick={toggleTheme}
+        className={state.theme == "dark" ? styles.active : ""}
+      >
         <ThemeIcon icon={WbSunnyTwoTone} />
       </button>
 
@@ -43,6 +49,7 @@ const Navbar = () => {
         type="button"
         aria-label="Show recent activities"
         onClick={toggleRecents}
+        className={state.showRecent ? styles.active : ""}
       >
         <ThemeIcon icon={HistoryTwoTone} />
       </button>
@@ -51,6 +58,7 @@ const Navbar = () => {
         type="button"
         aria-label="Show notifications"
         onClick={toggleNotifs}
+        className={state.showNotif ? styles.active : ""}
       >
         <ThemeIcon icon={NotificationsNoneTwoTone} />
       </button>
@@ -59,6 +67,7 @@ const Navbar = () => {
         type="button"
         aria-label="Toggle RightPanel"
         onClick={toggleRightPanel}
+        className={state.rightPanel ? styles.active : ""}
       >
         <ThemeIcon icon={ViewSidebarTwoTone} />
       </button>
