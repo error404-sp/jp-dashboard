@@ -14,11 +14,7 @@ const TableItem = ({ item, isLoading }) => {
     return (
       <tr>
         <td>
-          <input
-            type="checkbox"
-            checked={selectedOrders.includes(item?.id)}
-            onClick={() => toggleSelectOrder(item?.id)}
-          />
+          <input type="checkbox" />
         </td>
         <td>
           <Skeleton variant="text" />

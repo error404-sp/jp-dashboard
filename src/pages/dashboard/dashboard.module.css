@@ -1,0 +1,17 @@
+.dashDiv {
+  margin: 28px;
+}
+
+.dashboardLayout {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 16px 0;
+  border: 1px solid black;
+  gap: 28px;
+}
+
+h2 {
+  font-size: var(--font-regular);
+  font-weight: bold;
+  color: var(--primary-black);
+}

@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 3000,
+    historyApiFallback: true,
   },
   css: {
     modules: {
@@ -13,9 +13,6 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
-  },
-  server: {
-    historyApiFallback: true,
   },
   preview: {
     historyApiFallback: true,

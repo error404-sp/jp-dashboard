@@ -1,0 +1,277 @@
+.metricsDiv {
+  display: flex;
+  min-width: 300px;
+  width: 50%;
+  flex-wrap: wrap;
+  column-gap: 28px;
+  row-gap: 0px;
+  margin: 0px;
+}
+
+.metricEle {
+  width: 45%;
+  min-width: 120px;
+  box-sizing: border-box;
+  height: 100px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  color: var(--primary-black);
+  padding-top: 8px;
+  padding-left: 8px;
+}
+
+.color1 {
+  background: var(--color1);
+}
+
+.color2,
+.color3 {
+  background: var(--hover-bg);
+}
+
+.color4 {
+  background: var(--color4);
+}
+
+.metricLabel {
+  font-weight: 500;
+  font-size: var(--font-regular);
+  margin: 0;
+}
+
+.metricValueRow {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px;
+  line-height: 18px;
+}
+
+.metricValueRow:hover {
+  flex-direction: row-reverse;
+}
+
+.metricValue {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.metricChange,
+.metricChange svg {
+  font-size: var(--font-small) !important;
+}
+
+.monthWise {
+  width: 40%;
+  gap: 0.5rem;
+  background: var(--hover-bg);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.title {
+  font-size: var(--font-small);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.barChart {
+  width: 100%;
+  height: 200px;
+}
+
+.revenueWrapper {
+  background: var(--background);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 65%;
+  background: var(--hover-bg);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.revenueHeader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.revenueTitle {
+  font-size: var(--font-regular);
+  font-weight: 600;
+  color: var(--primary-black);
+  margin: 0;
+}
+
+.revenueDivider {
+  color: var(--text-light);
+  margin: 0.25rem 0;
+}
+
+.revenueLegendGroup {
+  display: flex;
+
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.revenueLegendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.revenueLegendDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 0.25rem;
+}
+
+.currentDot {
+  background: var(--primary-black);
+}
+
+.previousDot {
+  background: var(--color4);
+}
+
+.revenueLegendText {
+  font-size: var(--font-small);
+  font-weight: 400;
+  color: var(--primary-black);
+}
+
+.revenueLegendValue {
+  font-size: var(--font-small);
+  font-weight: 600;
+  color: var(--primary-black);
+}
+
+.dark .revenueWrapper {
+  background: rgba(28, 28, 28, 1);
+}
+
+.dark .revenueTitle,
+.dark .revenueLegendText,
+.dark .revenueLegendValue {
+  color: var(--primary-black);
+}
+
+.dark .revenueDivider {
+  color: var(--text-light);
+}
+
+.dark .currentDot {
+  background: #c6c7f8;
+}
+
+.dark .previousDot {
+  background: var(--color4);
+}
+
+.locationMapWrapper {
+  width: 200px;
+  padding: 12px;
+  background: var(--hover-bg);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  gap: 8px;
+  margin: auto;
+  font-family: "Inter", sans-serif;
+}
+
+.locationMapTitle {
+  font-weight: 600;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.locationMapContainer {
+  position: relative;
+  width: 200px;
+  height: 120px;
+}
+
+.locationMapTooltip {
+  position: absolute;
+  background: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  pointer-events: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.locationMapBars {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.locationMapBarWrapper {
+}
+
+.locationMapBarLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.locationMapBarBackground {
+  width: 100%;
+  background: #e5ecf6;
+  height: 4px;
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+.locationMapBarForeground {
+  background: #a8c5da;
+  height: 4px;
+  border-radius: 2px;
+  transition: width 0.8s ease-in-out;
+}
+
+.productsTable {
+  min-width: 400px;
+  width: 60%;
+  background: var(--hover-bg);
+  padding: 12px;
+}
+
+.table {
+  min-width: 400px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .metricsDiv,
+  .monthWise {
+    width: 90%;
+    justify-content: center;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .productsTable,
+  .revenueWrapper {
+    width: 95%;
+  }
+}
+
+@media (max-width: 400px) {
+  .metricEle {
+    width: 90%;
+  }
+}

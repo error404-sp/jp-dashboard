@@ -1,0 +1,170 @@
+{
+  "metrics": [
+    {
+      "label": "Customers",
+      "value": "4,205",
+      "change": "+12.50%"
+    },
+    {
+      "label": "Orders",
+      "value": "1,345",
+      "change": "+2.10%"
+    },
+    {
+      "label": "Revenue",
+      "value": "$752",
+      "change": "+18.00%"
+    },
+    {
+      "label": "Growth",
+      "value": "32.5%",
+      "change": "+7.20%"
+    }
+  ],
+  "topSellingProducts": [
+    {
+      "id": 1,
+      "name": "ASOS Ridley High Waist",
+      "price": 82.99,
+      "quantity": 90,
+      "amount": 7469.1
+    },
+    {
+      "id": 2,
+      "name": "Marco Lightweight Shirt",
+      "price": 130.0,
+      "quantity": 40,
+      "amount": 5200.0
+    },
+    {
+      "id": 3,
+      "name": "Half Sleeve Shirt",
+      "price": 42.5,
+      "quantity": 70,
+      "amount": 2975.0
+    },
+    {
+      "id": 4,
+      "name": "Lightweight Jacket",
+      "price": 22.0,
+      "quantity": 190,
+      "amount": 4180.0
+    },
+    {
+      "id": 5,
+      "name": "Marco Shoes",
+      "price": 82.99,
+      "quantity": 70,
+      "amount": 5809.3
+    }
+  ],
+  "charts": {
+    "revenueLineGraph": [
+      { "name": "Jan", "current": 15, "previous": 10 },
+      { "name": "Feb", "current": 10, "previous": 18 },
+      { "name": "Mar", "current": 11, "previous": 14 },
+      { "name": "Apr", "current": 18, "previous": 12 },
+      { "name": "May", "current": 22, "previous": 18 },
+      { "name": "Jun", "current": 22, "previous": 26 }
+    ],
+    "monthlyProjections": [
+      { "name": "Jan", "actual": 4, "projection": 18 },
+      { "name": "Feb", "actual": 6, "projection": 21 },
+      { "name": "Mar", "actual": 6, "projection": 18 },
+      { "name": "Apr", "actual": 6, "projection": 23 },
+      { "name": "May", "actual": 3, "projection": 15 },
+      { "name": "Jun", "actual": 6, "projection": 21 }
+    ],
+    "revenueByLocation": [
+      { "name": "New York", "coords": [-74.006, 40.7128], "revenue": 72000 },
+      {
+        "name": "San Francisco",
+        "coords": [-122.4194, 37.7749],
+        "revenue": 39000
+      },
+      { "name": "Sydney", "coords": [151.2093, -33.8688], "revenue": 25000 },
+      { "name": "Singapore", "coords": [103.8198, 1.3521], "revenue": 61000 }
+    ],
+    "sales": [
+      { "name": "Direct", "value": 200.56, "color": "#1C1C1C" },
+      { "name": "Affiliate", "value": 135.18, "color": "#BAEDBD" },
+      { "name": "Sponsored", "value": 154.02, "color": "#95A4FC" },
+      { "name": "E-mail", "value": 88.96, "color": "#B1E3FF" }
+    ]
+  },
+  "activities": [
+    {
+      "icon": "user1.svg",
+      "message": "You have a bug that needs fixing",
+      "time": "Just now"
+    },
+    {
+      "icon": "user2.svg",
+      "message": "Released a new version",
+      "time": "59 minutes ago"
+    },
+    {
+      "icon": "user3.svg",
+      "message": "Submitted a bug",
+      "time": "12 hours ago"
+    },
+    {
+      "icon": "user4.svg",
+      "message": "Modified a data in Page X",
+      "time": "Today, 11:59 AM"
+    },
+    {
+      "icon": "user5.svg",
+      "message": "Deleted a page in Project X",
+      "time": "Feb 2, 2023"
+    }
+  ],
+  "contacts": [
+    {
+      "icon": "user1.svg",
+      "name": "Natali Craig"
+    },
+    {
+      "icon": "user2.svg",
+      "name": "Drew Cano"
+    },
+    {
+      "icon": "user3.svg",
+      "name": "Orlando Diggs"
+    },
+    {
+      "icon": "user4.svg",
+      "name": "Andi Lane"
+    },
+    {
+      "icon": "user5.svg",
+      "name": "Kate Morrison"
+    },
+    {
+      "icon": "user6.svg",
+      "name": "Koray Okumus"
+    }
+  ],
+  "notifications": [
+    {
+      "icon": "bug",
+      "message": "You have a bug that needs fixing",
+      "time": "Just now"
+    },
+    {
+      "icon": "newuser",
+      "message": "New user registered",
+      "time": "59 minutes ago"
+    },
+    {
+      "icon": "bug",
+      "message": "You have a bug that needs fixing",
+      "time": "12 hours ago"
+    },
+    {
+      "icon": "broadcast",
+      "message": "Andi Lane subscribed to you",
+      "time": "Today, 11:59 AM"
+    }
+  ]
+}

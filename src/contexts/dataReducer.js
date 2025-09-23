@@ -6,6 +6,12 @@ export const dataInitialState = {
   selectedOrders: [],
   sort: { key: null, direction: null },
   isFiltered: false,
+  metrics: [],
+  topSellingProducts: [],
+  contacts: [],
+  charts: {},
+  notifications: [],
+  activities: [],
 };
 
 export const dataReducer = (state, action) => {
@@ -47,7 +53,6 @@ export const dataReducer = (state, action) => {
     case "TOGGLE_FILTER": {
       const newFilterState = !state.isFiltered;
 
-      // Always compute from allOrders — never from state.orders
       const baseOrders =
         state.selectedOrders.length > 0
           ? state.allOrders.filter((o) => state.selectedOrders.includes(o.id))
@@ -115,6 +120,23 @@ export const dataReducer = (state, action) => {
           : [...state.selectedOrders, orderId],
       };
     }
+
+    case "SET_DASHBOARD_DATA":
+      return {
+        ...state,
+        metrics: action.payload.metrics,
+        topSellingProducts: action.payload.topSellingProducts,
+        contacts: action.payload.contacts,
+      };
+
+    case "SET_CHARTS_DATA":
+      return { ...state, charts: action.payload };
+
+    case "SET_NOTIFICATIONS":
+      return { ...state, notifications: action.payload };
+
+    case "SET_ACTIVITIES":
+      return { ...state, activities: action.payload };
 
     default:
       return state;

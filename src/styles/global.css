@@ -9,8 +9,11 @@
   --background: rgba(255, 255, 255, 1);
   --border-light: rgba(28, 28, 28, 0.05);
   --hover-bg: rgba(249, 247, 251, 1);
+  --color1: #e3f5ff;
+  --color4: #e5ecf6;
   --font-regular: 14px;
   --font-small: 12px;
+  --font-large: 24px;
 }
 
 body {
@@ -103,4 +106,22 @@ tr:hover {
 tr:hover td input {
   opacity: 1;
   border-color: var(--light);
+}
+
+.color1 {
+  background: var(--color1);
+}
+
+.color2,
+.color3 {
+  background: var(--hover-bg);
+}
+
+.color4 {
+  background: var(--color4);
+}
+
+.dark .color1,
+.color4 {
+  color: rgba(28, 28, 28, 1) !important;
 }
