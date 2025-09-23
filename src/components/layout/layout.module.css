@@ -21,6 +21,8 @@
 
 .mainContent {
   width: 100%;
+  overflow: overlay;
+  scrollbar-width: thin;
 }
 
 .navigation {
@@ -102,4 +104,23 @@
 .navBar button.active {
   background: var(--border-black);
   color: var(--primary-black);
+}
+
+.searchDiv {
+  display: flex;
+  align-items: center;
+  background: var(--hover-bg);
+  border-radius: 5px;
+}
+
+.searchDiv input {
+  outline: none;
+  border: none;
+  height: 90%;
+  background: inherit;
+  color: var(--border-black);
+}
+
+.searchDiv svg path {
+  color: var(--border-black);
 }

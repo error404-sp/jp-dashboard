@@ -14,7 +14,7 @@ const SidePanel = () => {
   const { breakpoint, sidePanel } = uiState;
   const handleClose = () => uiDispatch({ type: "CLOSE_SIDE_PANEL" });
 
-  if (breakpoint === "desktop") {
+  if (breakpoint != "mobile") {
     return (
       <nav className={styles.sidePanel}>
         <NavLink to={"/"}>

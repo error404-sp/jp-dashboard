@@ -14,12 +14,11 @@ import { DataContext } from "../../contexts/DataContext";
 const Dashboard = () => {
   const { withLoading, isLoading } = useLoading(true, 1000);
   const { fetchDashboardData, fetchChartsData } = useMetrics();
-  const { state } = useContext(DataContext);
+
   useEffect(() => {
     withLoading(fetchDashboardData);
     withLoading(fetchChartsData);
   }, []);
-  console.log(isLoading);
 
   return (
     <div className={styles.dashDiv}>

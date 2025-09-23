@@ -5,35 +5,17 @@ import Navigation from "./Navigation";
 import {
   HistoryTwoTone,
   NotificationsNoneTwoTone,
-  StarTwoTone,
-  ViewSidebarTwoTone,
   WbSunnyTwoTone,
 } from "@mui/icons-material";
 import ThemeIcon from "../../ui/ThemeIcon";
 
-const Navbar = () => {
+const MiniNav = () => {
   const { state, dispatch } = useContext(UIContext);
   const toggleTheme = () => dispatch({ type: "TOGGLE_THEME" });
-  const toggleSidePanel = () => dispatch({ type: "TOGGLE_SIDEPANEL" });
-  const toggleRightPanel = () => dispatch({ type: "TOGGLE_RIGHTPANEL" });
   const toggleNotifs = () => dispatch({ type: "TOGGLE_NOTIFS" });
   const toggleRecents = () => dispatch({ type: "TOGGLE_RECENT" });
-
   return (
-    <nav className={styles.navBar}>
-      <button
-        type="button"
-        aria-label="Toggle side panel"
-        onClick={toggleSidePanel}
-        className={state.sidePanel ? styles.active : ""}
-      >
-        <ThemeIcon icon={ViewSidebarTwoTone} />
-      </button>
-      <button type="button" aria-label="Add to favourites" onClick={() => {}}>
-        <ThemeIcon icon={StarTwoTone} />
-      </button>
-      <Navigation />
-
+    <div style={{ display: "flex", justifyContent: "space-around" }}>
       <button
         type="button"
         aria-label="Change theme"
@@ -60,17 +42,8 @@ const Navbar = () => {
       >
         <ThemeIcon icon={NotificationsNoneTwoTone} />
       </button>
-
-      <button
-        type="button"
-        aria-label="Toggle RightPanel"
-        onClick={toggleRightPanel}
-        className={state.rightPanel ? styles.active : ""}
-      >
-        <ThemeIcon icon={ViewSidebarTwoTone} />
-      </button>
-    </nav>
+    </div>
   );
 };
 
-export default Navbar;
+export default MiniNav;

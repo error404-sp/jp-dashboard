@@ -3,6 +3,9 @@ import styles from "./layout.module.css";
 import { UIContext } from "../../contexts/UIContext";
 import Contacts from "../rightPanel/Contacts";
 import Navbar from "./Navbar";
+import Activities from "../rightPanel/Activities";
+import Notifications from "../rightPanel/Notifications";
+import MiniNav from "./MiniNav";
 
 const RightPanel = () => {
   const { state, dispatch } = useContext(UIContext);
@@ -13,8 +16,8 @@ const RightPanel = () => {
   if (breakpoint === "desktop") {
     return (
       <div className={styles.rightPanel}>
-        {showNotif && <div>Notifications</div>}
-        {showRecent && <div>Recents</div>}
+        {showNotif && <Notifications />}
+        {showRecent && <Activities />}
         <Contacts />
       </div>
     );
@@ -28,8 +31,9 @@ const RightPanel = () => {
         <button className={styles.closeBtn} onClick={handleClose}>
           &times;
         </button>
+        <MiniNav />
         {showNotif && <div>Notifications</div>}
-        {showRecent && <div>Recents</div>}
+        {showRecent && <Activities />}
         <Contacts />
       </div>
     </div>

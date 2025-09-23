@@ -264,6 +264,7 @@
 .productsTable {
   min-width: 400px;
   width: 60%;
+  height: fit-content;
   background: var(--hover-bg);
   padding: 12px;
 }

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./rightPanel.module.css";
 import CustomProfile from "../../ui/CustomProfile";
 import useMetrics from "../../hooks/useMetrics";
 
 const Contacts = () => {
-  const { contacts } = useMetrics();
+  const { fetchDashboardData, contacts } = useMetrics();
+  useEffect(() => {
+    fetchDashboardData();
+  }, []);
 
   return (
     <div className={styles.rightPanelSection}>
